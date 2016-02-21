@@ -1,0 +1,17 @@
+<%= error_messages_for(@invoice) %>
+<h2>Edit an invoice</h2>
+
+<%= form_for  [@customer, @invoice] do |f| %>
+
+      <%= f.label :quantity  %>
+      <%= f.number_field :quantity %><br>
+      <%= f.label :type, "What type of Widget Would you like?" %>
+      <%= f.select :widgetType, [' ','Widget', 'Widget Pro', 'Widget Xtreme'] %><br>
+      <%= f.label :color, "Select Color" %>
+      <%= f.select :color, [' ','Red', 'Blue', 'Yellow'] %><br>
+      <%= f.label :requiredDate, "When do you need delivery?" %>
+      <%= f.date_field :requiredDate %><br><br>
+      <%= link_to  'Cancel', customer_path(@customer) %>
+      <%= f.submit  class: "btn btn-primary" %>
+      
+    <% end %>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Widgets</title>
+
+	 	<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css">
+	 	<link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css">
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	  
+	   </nav>
+	</head>
+	<body>
+		<header id="main_navigation" class="clearfix">
+				<%= link_to "Widget, Inc.", root_path, class: "name" %>
+				<nav>
+					<%= link_to "Home", root_path, class: "heading" %>
+					<%= link_to "New Customer", new_customer_path, class: "heading" %>	
+				</nav>
+			</header>
+
+			<div class="container">
+	    	<h1><%= yield :header %></h1>
+	    	<%= yield %>
+	    	<div id="main-content">
+	      	<% if notice %>
+	       		<p class="alert alert-success"><%= notice %></p>
+	      	<% end %>
+	      	<% if alert %>
+	        	<p class="alert alert-danger"><%= alert %></p>
+	  			<% end %>  
+	    	</div>
+			</div>
+
+	</body>
+</html>

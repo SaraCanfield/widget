@@ -1,0 +1,14 @@
+<%= error_messages_for(@customer) %>
+
+<%= form_for @customer do |f| %>
+		<%= f.label "Company Name" %><br>
+		<%= f.text_field :companyName %><br>
+		<%= f.label "Email" %><br>
+		<%= f.email_field :email %><br>
+		<%= f.label "First Name" %><br>
+		<%= f.text_field :fname %><br>
+		<%= f.label "Last Name" %><br>
+		<%= f.text_field :lname%><br><br>
+		<%= link_to  'Cancel', customers_path %>
+		<%= f.submit class: "btn btn-primary" %>	
+	<% end %>

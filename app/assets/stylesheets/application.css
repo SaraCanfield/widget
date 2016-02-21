@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+*= require_self
+ *= require_tree .
+ */
+ /** { 
+	/*font-family: 'Patrick Hand SC', cursive*/
+	* {
+	font-family: 'Roboto Condensed', sans-serif;
+} 
+
+body { 
+	
+	font-size: 18px;
+}
+
+#main_navigation {
+	padding: .3em 5%;
+	border-bottom: 1px solid;
+	font-size: 24px;
+
+	}
+	.name {
+		font-weight: 700;
+		font-size: 24px;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		border: 2px solid $border;
+		padding: 1rem;
+		text-decoration: none;
+		color:navy;
+		float: left;
+	}
+
+	.heading {
+		font-weight: 700;
+		font-size: 24px;
+		padding: 1rem;
+		text-decoration: none;
+		color:navy;
+		float: right;
+	}
+	
+
+#main-content {
+
+	position: absolute;
+	width: 80%;
+	top:70px
+}
+.cust {
+	padding-top: 40px;
+}

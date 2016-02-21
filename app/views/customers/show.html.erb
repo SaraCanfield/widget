@@ -1,0 +1,23 @@
+
+<h2 class="cust"><%= @customer.companyName %></h2>
+
+<p>
+<%= link_to "Update Customer     ", edit_customer_path(@customer) ,class: "btn btn-primary"%>
+<%= link_to "Delete Customer", customer_path(@customer), method: :delete, data: { confirm: "Are you sure?"} ,class: "btn btn-primary"%>
+<%= link_to 'Add Invoice', new_customer_invoice_path(@customer) ,class: "btn btn-primary" %>
+</p>
+
+<div>
+	<h2>Contact Information:</h2>
+	<%= @customer.fname + ' ' + @customer.lname %><br>
+	<%= @customer.email %> <br>
+</div>
+
+
+<h3> Invoices </h3>
+
+	<%= render @customer.invoices %>
+
+
+
+<br>

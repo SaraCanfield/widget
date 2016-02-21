@@ -1,0 +1,15 @@
+<%= error_messages_for(@invoice) %>
+<p>
+     Invoice ID: <%= invoice.id %><br>
+     Quantity  : <%= invoice.quantity  %><br>
+     Type      : <%= invoice.widgetType %><br>
+     Color     : <%= invoice.color %><br>
+     Needed    : <%= invoice.requiredDate.strftime("%m/%d/%Y") %><br>
+
+  	    
+     <%= link_to 'Delete', [invoice.customer, invoice], method: :delete,data: { confirm: 'Are you sure?' } ,class: "btn btn-primary"%>
+ 
+     <%= link_to 'Update', edit_customer_invoice_path(@customer, invoice.id), class: "btn btn-primary" %>
+     
+</p>
+      
